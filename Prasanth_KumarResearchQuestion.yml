@@ -1,0 +1,62 @@
+# This file is in YAML format.  You must ensure that the punctuation
+# and whitespace is preserved.  Do NOT use Windows Notepad to edit this
+# file; use a real programming editor like Notepad++ instead.
+
+# Write your group name exactly as it appears on Canvas.
+group: A339
+
+# Write the names of your group members as a comma-separated list
+# within the square brackets.
+members: [Venkateswarlu Tatikonda, Prasanth Kumar Somaluri, Navaneet Singh, Muhammad Yasir]
+
+# Write your general topic.  
+topic: Impact of vehicle specifications on CO2 emissions.
+
+# Write your research question, following one of the three allowed templates.
+# Be sure your question is all on one line.
+RQ: Is there any significant relationship between engine size, fuel type, and transmission type on CO2 emissions in vehicles across different classes?
+
+# Write your independent and dependent variables.  These should be the
+# column names (reported by R colnames() where these variables are
+# found in your dataset's CSV file.
+# Note: if your question is about comparison of means, medians, or
+# proportions, the independent variable column is the one that
+# contains the values (at least two) that divide the population into
+# subsets.
+independent-var: Engine.Size.in.Litres, Fuel.Type, Transmission
+dependent-var: CO2.Emissions..g.km.
+
+# Write the null hypothesis for your research question, again ensuring it is all on one line.
+null-hypothesis: There is no significant relationship between engine size, fuel type, transmission type, and CO2 emissions in vehicles.
+
+# Write the alternative hypothesis for your research question, again ensuring it is all on one line.
+alt-hypothesis: There is a significant relationship between engine size, fuel type, transmission type, and CO2 emissions in vehicles.
+
+# Write the dataset ID (KNNN):
+dataset-id:
+
+# Write the dataset URL.  
+dataset-url: https://www.kaggle.com/datasets/mhendal/2019-fuel-consumption-ratings-20190514
+
+# Write the dataset CSV filename, exactly as it appears on the Sharepoint list
+# (which should be the same as the one in your repository!)
+dataset-file: Fuel_Consumption_Ratings.csv
+
+# Paste the output of loading your dataset into R, and executing the
+# colnames() function, into the space below the `columns: |` line.
+# Put two spaces *before* every line you pasted.
+
+# Loading the dataset
+FuelData <- read.csv("Fuel_Consumption_Ratings.csv", stringsAsFactors = FALSE)
+
+# Printing the column names
+columns: colnames(FuelData)
+[1] "Model.Year"                            "Make"                                 
+[3] "Model"                                 "Vehicle.Class"                        
+[5] "Engine.Size.in.Litres"                 "Cylinders"                            
+[7] "Transmission"                          "Fuel.Type"                            
+[9] "Fuel.Consumption.in.City..L.100km."    "Fuel.Consumption.in.Highway..L.100km."
+[11] "Fuel.Consumption.Combined..L.100km."   "CO2.Emissions.Combined..mpg."         
+[13] "CO2.Emissions..g.km."                  "CO2.Rating"                           
+[15] "Smog.Rating"                          
+  
